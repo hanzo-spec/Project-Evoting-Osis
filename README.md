@@ -1,8 +1,8 @@
 # **Projek E-Voting Calon Ketua dan Wakil Ketua OSIS**
- * projek ini adalah sebuah website sederhana yang dirancang untuk mempermudah pemungutan suara di lingkungan sekolah.
+projek ini adalah sebuah website sederhana yang dirancang untuk mempermudah pemungutan suara di lingkungan sekolah.
 Berikut adalah penjelasan mengenai projek ini, mulai dari latar belakang hingga cara kerja setiap filenya.
 ## 1. Pengenalan Projek
- * Projek ini adalah sistem pemungutan suara elektronik (E-Voting) berbasis web.
+Projek ini adalah sistem pemungutan suara elektronik (E-Voting) berbasis web.
 Website ini memungkinkan siswa-siswi untuk melihat daftar kandidat ketua dan wakil ketua OSIS beserta visi-misi mereka, lalu memberikan suara (*voting*) secara digital.
 ## 2. Alasan Dibuatnya Projek
  * **Efisiensi Waktu dan Biaya:** Mengurangi penggunaan kertas untuk surat suara dan mempercepat proses perhitungan suara serta siswa tidak perlu mengantri saat akan melakukan voting.
