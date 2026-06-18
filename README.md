@@ -12,8 +12,8 @@ Project ini dibuat untuk menggantikan metode pemilihan konvensional (menggunakan
  4. **upload.php** berdiri sendiri sebagai halaman khusus admin untuk menambahkan data kandidat baru ke dalam database.
  5. **style.css** mengatur tampilan halaman login, sedangkan **dashboard.css** mengatur tampilan halaman utama pemilihan(dashboard.php)
 
-Berikut adalah penjelasan secara **sangat rinci, baris demi baris**, untuk seluruh kode program proyek *E-Voting Calon Ketua dan Wakil Ketua OSIS SMK PUSDIKHUBAD CIMAHI*.
-## 1. BEDAH DATABASE (voting_osis.sql)
+Berikut adalah penjelasan untuk kode program project *E-Voting Calon Ketua dan Wakil Ketua OSIS SMK PUSDIKHUBAD CIMAHI*.
+## 1. DATABASE (voting_osis.sql)
 File ini adalah skrip SQL untuk membuat struktur tabel dan mengisi data awal (seed data) ke dalam database MySQL menggunakan phpMyAdmin.
 ### Bagian Pengaturan Awal (Header Metadata)
 ```sql
@@ -413,7 +413,6 @@ if(isset($_POST['upload'])){
 <!-- Catatan Penulisan: Di baris akhir file terdapat sisa tag penutup </form> </body> </html> yang berlebih (duplikat), namun tidak merusak sistem back-end PHP -->
 
 ```
-## 3. BEDAH DESAIN TAMPILAN (CSS) SECARA RINCI
 ### file: style.css (Desain Halaman Login)
 ```css
 body{
