@@ -1,30 +1,17 @@
-Proyek E-Voting Calon Ketua dan Wakil Ketua OSIS SMK PUSDIKHUBAD CIMAHI ini adalah sebuah sistem berbasis web yang dirancang untuk mendigitalisasi proses pemungutan suara (voting) dalam pemilihan internal sekolah.
-Berikut adalah penjelasan lengkap mengenai proyek, hubungan antar-file, bedah kode, fitur, hingga saran pengembangannya.
-## 1. Alasan Dibuatnya Proyek
-Proyek ini dibuat untuk menggantikan metode pemilihan konvensional (menggunakan kertas suara fisik) menjadi sistem digital. Alasan utamanya meliputi:
+Project E-Voting Calon Ketua dan Wakil Ketua OSIS SMK PUSDIKHUBAD CIMAHI ini adalah sebuah sistem berbasis web yang dirancang untuk mempermudah proses pemungutan suara (voting) dalam pemilihan di sekolah.
+Berikut adalah penjelasan mengenai project ini.
+## 1. Alasan Dibuatnya Project
+Project ini dibuat untuk menggantikan metode pemilihan konvensional (menggunakan kertas suara fisik) menjadi sistem digital. Alasan nya meliputi:
  * **Efisiensi Waktu dan Biaya:** Menghemat anggaran pencetakan surat suara dan mempercepat proses penghitungan suara secara *real-time*.
  * **Akurasi Data:** Meminimalkan risiko kesalahan manusia (*human error*) saat menghitung suara manual.
- * **Kemudahan Akses:** Siswa-siswi dapat melihat visi-misi kandidat dan memberikan hak suara mereka langsung melalui perangkat komputer atau *smartphone* yang terhubung ke jaringan sekolah.
-## 2. Hubungan Antar-File (Arsitektur Sistem)
-Sistem ini bekerja secara dinamis dengan alur interaksi antar-file sebagai berikut:
-```
-                  [ style.css / dashboard.css (Desain Tampilan) ]
-                                       |
-[ login.php ] -------> [ proseslog.php ] -------> [ dashboard.php ]
-                               |                         |
-                        [ koneksi.php ]                  |-----> [ vote.php ]
-                               |                         |
-                    ( Database: voting_osis )            |-----> [ hapus.php ]
-                               |
-                        [ upload.php ]
-
-```
+ * **Kemudahan Akses:** Siswa-siswi dapat melihat visi-misi kandidat dan memberikan hak suara mereka langsung melalui perangkat komputer atau smartphone.
+## 2. Penjelasan setiap file 
  1. **koneksi.php** adalah fondasi utama yang menghubungkan database MySQL (voting_osis) ke semua file PHP yang membutuhkan manipulasi data (proseslog.php, dashboard.php, vote.php, hapus.php, upload.php).
  2. Pengguna pertama kali masuk melalui **login.php**, lalu datanya diproses oleh **proseslog.php**. Jika sukses, pengguna diarahkan ke **dashboard.php**.
- 3. Di dalam **dashboard.php**, pengguna dengan peran (role) *user* dapat memilih kandidat yang memicu jalannya fungsi di **vote.php**. Sementara pengguna dengan *role* *admin* akan melihat tombol hapus yang memicu **hapus.php**.
+ 3. Di dalam **dashboard.php**, pengguna dengan peran *user* dapat memilih kandidat yang memicu jalannya fungsi di **vote.php**. Sementara pengguna dengan peran *admin* akan melihat tombol hapus yang memicu **hapus.php**.
  4. **upload.php** berdiri sendiri sebagai halaman khusus admin untuk menambahkan data kandidat baru ke dalam database.
- 5. **style.css** mengatur tampilan visual halaman login, sedangkan **dashboard.css** mengatur estetika halaman utama pemilihan.
-## 3. Penjelasan Kode dari Masing-Masing File
+ 5. **style.css** mengatur tampilan halaman login, sedangkan **dashboard.css** mengatur tampilan halaman utama pemilihan(dashboard.php).
+## 3. Penjelasan Beberapa Kode dari Masing-Masing File
 ### a. koneksi.php
  * **Fungsi:** Mengatur konfigurasi kredensial database lokal menggunakan fungsi mysqli_connect().
  * **Analisis Kode:** Jika koneksi ke server database localhost dengan user root dan database voting_osis gagal, sistem akan otomatis berhenti (die) dan menampilkan pesan error.
